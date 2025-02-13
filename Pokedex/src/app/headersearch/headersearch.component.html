@@ -1,0 +1,9 @@
+<form [formGroup]="submitForm" (ngSubmit)="onSubmit()">
+    <label for="pokemon">
+        What pokemon would you like to search ?
+    </label>
+    <mat-form-field disbaleRipple class="searchField">
+        <input matInput formControlName="pokemon" >
+    </mat-form-field>
+    <button type="submit" class="submitButton">Search</button>
+</form>

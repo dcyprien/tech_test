@@ -1,0 +1,22 @@
+<mat-card class="pokemon-details">
+    <mat-card-header>
+        <mat-card-title>Détails</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            Taille: {{ pokemon.height }} m<br>
+            Poids: {{ pokemon.weight }}<br>
+            Types :
+        </p>
+            @for (types of pokemon.type; track pokemon.id){
+                <ul>- {{ types.type.name | titlecase }}</ul>
+            }
+            Compétences :
+            @for (ability of pokemon.abilities; track pokemon.id){
+                <ul>- {{ ability.ability.name | titlecase }} </ul>
+            }
+            Espèces : 
+            <ul>- {{ pokemon.species }}</ul>
+            
+    </mat-card-content>
+</mat-card>

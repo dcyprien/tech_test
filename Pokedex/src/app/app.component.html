@@ -1,0 +1,7 @@
+<app-headersearch (pokemon)="getPokemon($event)"></app-headersearch>
+@if (pokemon) {
+    <div class="pokemon">
+        <app-image [urlFront]="pokemon.front" [urlBack]="pokemon.back" [name]="pokemon.name"></app-image>
+        <app-details [pokemon]="pokemon"/>
+    </div>
+}
